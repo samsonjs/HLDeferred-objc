@@ -19,14 +19,11 @@
         if (!error) {
             [[self responseData] setLength: 0];
             [self setResult: result];
-            [self asyncCompleteOperationResult];
         } else {
             [self setError: error];
-            [self asyncCompleteOperationError];
         }
-    } else {
-        [super responseFinished];
     }
+    [super responseFinished];
 }
 
 @end
